@@ -22,6 +22,7 @@ public class ParcialLaboratorio {
         int numero2 = Integer.parseInt(JOptionPane.showInputDialog("Por favor ingrese otro número"));
         int numero3 = Integer.parseInt(JOptionPane.showInputDialog("Por favor ingrese el último número"));
         int resultado = multiplicar(numero1, numero2, numero3);
+        
         JOptionPane.showMessageDialog(null, "El resultado es: "+resultado);
     }
     
@@ -30,5 +31,20 @@ public class ParcialLaboratorio {
         return operacion;
     }
     
+    public static void numeroMenor(int numero1, int numero2, int numero3){
+        int[] arreglo = new int[2];
+        arreglo[0]=numero1;
+        arreglo[1]=numero2;
+        arreglo[2]=numero3;
+        int menor=0;
+        for (int i = 0; i < arreglo.length; i++) {
+           if(arreglo[i]<menor){
+               menor= arreglo[i];
+           }
+        }
+        
+        System.out.println("Numero menor: "+menor);
+    
+    }
     
 }
